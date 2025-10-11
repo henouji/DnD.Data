@@ -1,4 +1,4 @@
-CREATE TABLE alignments (
+CREATE TABLE alignment (
     id INT PRIMARY KEY IDENTITY(1,1),
     name NVARCHAR(100) NOT NULL,
     abbreviation NVARCHAR(10),
