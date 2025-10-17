@@ -1,4 +1,5 @@
-CREATE TABLE range_category (
+CREATE TABLE range_category
+(
     id INT PRIMARY KEY IDENTITY(1,1),
     name NVARCHAR(100) NOT NULL,
     description NVARCHAR(MAX),

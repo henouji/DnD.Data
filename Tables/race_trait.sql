@@ -1,4 +1,5 @@
-CREATE TABLE race_trait (
+CREATE TABLE race_trait
+(
     id INT PRIMARY KEY IDENTITY(1,1),
     race_id INT NOT NULL,
     trait_id INT NOT NULL,

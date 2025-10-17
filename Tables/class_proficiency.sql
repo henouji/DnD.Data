@@ -7,6 +7,5 @@ CREATE TABLE class_proficiency (
     updated_at DATETIME DEFAULT GETDATE(),
     deleted BIT NULL,
     INDEX idx_class_id (class_id),
-    INDEX idx_proficiency_type (proficiency_type),
     INDEX idx_proficiency_id (proficiency_id)
 );

@@ -1,4 +1,5 @@
-CREATE TABLE weapon_properties (
+CREATE TABLE weapon_property
+(
     id INT PRIMARY KEY IDENTITY(1,1),
     name NVARCHAR(100) NOT NULL,
     description NVARCHAR(MAX),

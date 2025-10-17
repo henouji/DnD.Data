@@ -1,4 +1,5 @@
-CREATE TABLE race_language (
+CREATE TABLE race_language
+(
     id INT PRIMARY KEY IDENTITY(1,1),
     race_id INT NOT NULL,
     language_id INT NOT NULL,

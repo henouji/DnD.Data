@@ -1,7 +1,8 @@
-CREATE TABLE rarity (
+CREATE TABLE rarity
+(
     id INT PRIMARY KEY IDENTITY (11000, 11),
     name NVARCHAR(100) NOT NULL,
     created_at DATETIME DEFAULT GETDATE (),
     updated_at DATETIME DEFAULT GETDATE (),
     deleted BIT NULL
-)
+);

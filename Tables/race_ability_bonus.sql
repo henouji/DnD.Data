@@ -1,4 +1,5 @@
-CREATE TABLE race_ability_bonus (
+CREATE TABLE race_ability_bonus
+(
     id INT PRIMARY KEY IDENTITY(1,1),
     race_id INT NOT NULL,
     ability_score_id INT NOT NULL,

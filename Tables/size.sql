@@ -1,7 +1,8 @@
-CREATE TABLE size (
+CREATE TABLE size
+(
     id BIGINT PRIMARY KEY IDENTITY(40000000,1),
     name NVARCHAR(100) NOT NULL,
-    speed INT NOT NULL, 
+    speed INT NOT NULL,
     created_at DATETIME DEFAULT GETDATE(),
     updated_at DATETIME DEFAULT GETDATE(),
     deleted BIT NULL

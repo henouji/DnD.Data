@@ -1,4 +1,5 @@
-CREATE TABLE level_spellcasting (
+CREATE TABLE level_spellcasting
+(
     id INT PRIMARY KEY IDENTITY(1,1),
     level_id INT NOT NULL,
     cantrips_known INT NULL,
@@ -14,8 +15,10 @@ CREATE TABLE level_spellcasting (
     FOREIGN KEY (spellcasting_ability_id) REFERENCES ability_score(id),
     UNIQUE(level_id)
 );
+GO;
 
-CREATE TABLE level_spell_slots (
+CREATE TABLE level_spell_slots
+(
     id INT PRIMARY KEY IDENTITY(1,1),
     level_spellcasting_id INT NOT NULL,
     spell_slot_level_id INT NOT NULL,
@@ -26,3 +29,4 @@ CREATE TABLE level_spell_slots (
     FOREIGN KEY (spell_slot_level_id) REFERENCES spell_slot_level(id),
     UNIQUE(level_spellcasting_id, spell_slot_level_id)
 );
+GO;

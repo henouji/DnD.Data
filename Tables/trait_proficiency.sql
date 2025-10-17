@@ -1,4 +1,5 @@
-CREATE TABLE trait_proficiency (
+CREATE TABLE trait_proficiency
+(
     id INT PRIMARY KEY IDENTITY(1,1),
     trait_id INT NOT NULL,
     proficiency_id INT NOT NULL,

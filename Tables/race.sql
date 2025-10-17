@@ -1,4 +1,5 @@
-CREATE TABLE race (
+CREATE TABLE race
+(
     id INT PRIMARY KEY IDENTITY(1,1),
     name NVARCHAR(100) NOT NULL,
     speed INT NOT NULL,
