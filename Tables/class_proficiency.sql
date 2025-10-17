@@ -2,7 +2,6 @@ CREATE TABLE class_proficiency (
     id INT PRIMARY KEY IDENTITY(1,1),
     class_id INT NOT NULL,
     proficiency_id BIGINT NULL, 
-    is_optional BIT NOT NULL DEFAULT 0, 
     created_at DATETIME DEFAULT GETDATE(),
     updated_at DATETIME DEFAULT GETDATE(),
     deleted BIT NULL,
