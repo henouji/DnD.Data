@@ -1,7 +1,7 @@
 CREATE TABLE level
 (
     id INT PRIMARY KEY IDENTITY (70000, 7),
-    level INT NOT NULL CHECK (level BETWEEN 1 AND 20),
+    level INT NOT NULL,
     class_id INT NOT NULL,
     ability_score_bonuses INT NULL DEFAULT 0,
     proficiency_bonus INT NULL,
@@ -11,6 +11,8 @@ CREATE TABLE level
 );
 GO;
 
+
+-- Might be a circular reference, shit might break: frick
 CREATE TABLE level_features
 (
     id INT PRIMARY KEY IDENTITY (80000, 8),

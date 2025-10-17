@@ -17,7 +17,8 @@ CREATE TABLE equipment
     vehicle_category NVARCHAR (128) NULL,
     -- 'Mounts and Other Animals', etc.
     -- Armor specific fields
-    armor_class_id INT NULL,
+    armor_class_base INT NULL,
+    armor_class_dex_bonus BIT NULL,
     str_minimum INT NULL,
     stealth_disadvantage BIT NULL,
     -- Range values (weapons)

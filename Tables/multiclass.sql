@@ -29,7 +29,7 @@ CREATE TABLE multiclass_proficiency
 (
     id INT PRIMARY KEY IDENTITY(1,1),
     multiclass_id INT NOT NULL,
-    proficiency_id INT NOT NULL,
+    proficiency_id BIGINT NOT NULL,
     created_at DATETIME DEFAULT GETDATE(),
     updated_at DATETIME DEFAULT GETDATE(),
     deleted BIT NULL,
@@ -60,7 +60,7 @@ CREATE TABLE multiclass_proficiency_choice_option
 (
     id INT PRIMARY KEY IDENTITY(1,1),
     choice_group_id INT NOT NULL,
-    proficiency_id INT NOT NULL,
+    proficiency_id BIGINT NOT NULL,
     option_type NVARCHAR(50) NOT NULL DEFAULT 'reference',
     created_at DATETIME DEFAULT GETDATE(),
     updated_at DATETIME DEFAULT GETDATE(),

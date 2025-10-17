@@ -1,7 +1,9 @@
-CREATE TABLE proficiencies
+CREATE TABLE proficiency
 (
-    id INT PRIMARY KEY IDENTITY(1,1),
+    id BIGINT PRIMARY KEY IDENTITY(600000000,1),
     name NVARCHAR(100) NOT NULL,
+    type NVARCHAR(100) NOT NULL,
+    reference NVARCHAR(500) NULL,
     created_at DATETIME DEFAULT GETDATE(),
     updated_at DATETIME DEFAULT GETDATE(),
     deleted BIT NULL

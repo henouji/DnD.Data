@@ -4,6 +4,7 @@ CREATE TABLE feature (
     level INT NULL,
     description NVARCHAR(MAX),
     class_id INT NULL,
+    subclass_id INT NULL,
     parent_feature_id INT NULL,
     created_at DATETIME DEFAULT GETDATE(),
     updated_at DATETIME DEFAULT GETDATE(),

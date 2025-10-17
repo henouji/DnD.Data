@@ -25,7 +25,11 @@ CREATE TABLE spell
     dc_description VARCHAR(MAX) NULL,
     area_of_effect VARCHAR(50) NULL,
     area_of_effect_size INT NULL,
-    magic_school_id INT NULL
+    magic_school_id INT NULL,
+    
+    created_at DATETIME DEFAULT GETDATE (),
+    updated_at DATETIME DEFAULT GETDATE (),
+    deleted BIT NOT NULL DEFAULT 0,
 );
 GO;
 

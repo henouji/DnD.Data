@@ -101,14 +101,7 @@ CREATE TABLE monster_actions
 (
     id BIGINT PRIMARY KEY IDENTITY (3500000, 1),
     monster_id BIGINT NOT NULL,
-    action_type NVARCHAR (20) NOT NULL CHECK (
-            action_type IN (
-                'action',
-                'legendary_action',
-                'reaction',
-                'special_ability'
-            )
-        ),
+    action_type NVARCHAR (20) NOT NULL,
     action_data NVARCHAR (MAX) NOT NULL,
     -- JSON data
     created_at DATETIME DEFAULT GETDATE (),

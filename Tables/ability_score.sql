@@ -5,7 +5,5 @@ CREATE TABLE ability_score (
     description NVARCHAR(MAX),
     created_at DATETIME DEFAULT GETDATE(),
     updated_at DATETIME DEFAULT GETDATE(),
-    created_by NVARCHAR(100),
-    updated_by NVARCHAR(100),
-    deleted_at DATETIME
+    deleted BIT DEFAULT 0
 );
