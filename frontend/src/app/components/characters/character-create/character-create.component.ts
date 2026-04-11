@@ -56,7 +56,10 @@ export class CharacterCreateComponent {
     };
     this.characterService.create(request).subscribe({
       next: () => this.router.navigate(['/characters']),
-      error: (err) => { this.errorMessage = err.error ?? 'Failed to create character.'; }
+      error: (err) => {
+        const body = err.error;
+        this.errorMessage = typeof body === 'string' ? body : (body?.message ?? err.message ?? 'Failed to create character.');
+      }
     });
   }
 }
