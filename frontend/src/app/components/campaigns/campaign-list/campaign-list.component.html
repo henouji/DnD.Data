@@ -1,0 +1,10 @@
+<h2>Campaigns</h2>
+<p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+<ul>
+  <li *ngFor="let campaign of campaigns">
+    <strong>{{ campaign.name }}</strong>
+    <span *ngIf="campaign.dungeonMaster"> - DM: {{ campaign.dungeonMaster }}</span>
+    <span> ({{ campaign.characterIds.length }} characters)</span>
+    <button (click)="delete(campaign.id)">Delete</button>
+  </li>
+</ul>

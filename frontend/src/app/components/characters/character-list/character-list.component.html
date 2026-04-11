@@ -1,0 +1,9 @@
+<h2>Characters</h2>
+<a routerLink="/characters/create">Create New Character</a>
+<p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+<ul>
+  <li *ngFor="let character of characters">
+    <strong>{{ character.name }}</strong> - {{ character.race }} {{ character.class }} (Level {{ character.level }})
+    <button (click)="delete(character.id)">Delete</button>
+  </li>
+</ul>

@@ -1,0 +1,30 @@
+<h2>Create Character</h2>
+<p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <label>Name: <input formControlName="name" /></label>
+  <label>Race:
+    <select formControlName="race">
+      <option value="">Select race</option>
+      <option *ngFor="let r of races" [value]="r">{{ r }}</option>
+    </select>
+  </label>
+  <label>Class:
+    <select formControlName="class">
+      <option value="">Select class</option>
+      <option *ngFor="let c of classes" [value]="c">{{ c }}</option>
+    </select>
+  </label>
+  <label>Level: <input type="number" formControlName="level" min="1" max="20" /></label>
+  <label>Background: <input formControlName="background" /></label>
+  <label>Alignment: <input formControlName="alignment" /></label>
+  <fieldset>
+    <legend>Ability Scores</legend>
+    <label>Strength: <input type="number" formControlName="strength" /></label>
+    <label>Dexterity: <input type="number" formControlName="dexterity" /></label>
+    <label>Constitution: <input type="number" formControlName="constitution" /></label>
+    <label>Intelligence: <input type="number" formControlName="intelligence" /></label>
+    <label>Wisdom: <input type="number" formControlName="wisdom" /></label>
+    <label>Charisma: <input type="number" formControlName="charisma" /></label>
+  </fieldset>
+  <button type="submit" [disabled]="form.invalid">Create Character</button>
+</form>
