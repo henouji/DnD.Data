@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 16px;
+}
+
+nav a {
+  margin-right: 16px;
+  text-decoration: none;
+  color: #4a3c2a;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+fieldset {
+  margin-bottom: 16px;
+}

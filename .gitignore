@@ -5,3 +5,12 @@ obj
 __pycache__
 *.pyc
 *.log
+
+*.user
+.vs/
+node_modules/
+dist/
+.angular/
+*.suo
+publish/
+*.nupkg
